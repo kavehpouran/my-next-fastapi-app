@@ -3,11 +3,10 @@ export default function MyNextFastAPIApp() {
 }
 
 async function GetEngineerRoles({ title }: { title: string }) {
-  // let baseUrl = "https://interviewtutor.vercel.app";
-  // if (process.env.NODE_ENV === "development") {
-  //   baseUrl = "http://localhost:3000/";
-  // }
-  const baseUrl = "http://localhost:3000/";
+  let baseUrl = "my-next-fastapi-app.vercel.app";
+  if (process.env.NODE_ENV === "development") {
+    baseUrl = "http://localhost:3000/";
+  }
 
   try {
     const data = await fetch(`${baseUrl}/api/py/engineer-roles?title=${title}`);
