@@ -2,7 +2,7 @@ export default function MyNextFastAPIApp() {
   return <GetEngineerRoles title="Fullstack Developer" />;
 }
 
-export async function GetEngineerRoles({ title }: { title: string }) {
+async function GetEngineerRoles({ title }: { title: string }) {
   // let baseUrl = "https://interviewtutor.vercel.app";
   // if (process.env.NODE_ENV === "development") {
   //   baseUrl = "http://localhost:3000/";
