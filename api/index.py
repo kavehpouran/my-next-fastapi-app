@@ -14,7 +14,7 @@ app = FastAPI(docs_url="/api/py/docs",  openapi_url="/api/py/openapi.json")
 
 
 @app.get("/api/py/engineer-roles")
-async def read_category_by_query(title: str): 
+async def read_category_by_query(title: str):
     role_to_return = None
     for role in ENGINEER_ROLES:
         if role.get('title').casefold() == title.casefold():
